@@ -32,7 +32,7 @@ const Invalid = () => {
         sx={{
           width: "60%",
           margin: "0 auto",
-          minHeight: "100vh",
+          minHeight: "91vh",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

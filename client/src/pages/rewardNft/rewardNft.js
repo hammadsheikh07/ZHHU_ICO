@@ -275,14 +275,16 @@ const RewardNft = () => {
 
   const leftComponent = (
     <>
-      <Typography
-        variant="h2"
-        sx={{ my: 0.5, color: "white", textAlign: "center" }}
-      >
-        Welcome to ZHHU Reward NFT!
-      </Typography>
-      <Typography variant="h5" sx={{ my: 0.5, color: "white" }}>
-        Its an Pre NFT drop to participate in ICO.
+      <Box sx={{ textAlign: "center", mb: 2 }}>
+        <Typography variant="h2" sx={{ my: 0.5, color: "white" }}>
+          Welcome to Z<span style={{ color: "#FFFF00" }}>HH</span>U's
+        </Typography>
+        <Typography variant="h3" sx={{ color: "white" }}>
+          NFT REWARD
+        </Typography>
+      </Box>
+      <Typography variant="h5" sx={{ mb: 1, color: "white" }}>
+        Claim your NFTs in half the time
       </Typography>
       {renderButton()}
     </>

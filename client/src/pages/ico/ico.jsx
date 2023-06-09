@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Input } from "@mui/material";
+import { Box, Button, Input, Typography } from "@mui/material";
 import SideBySide from "../../components/SideBySide";
 import logo from "../../static/images/logo1500.png";
 
@@ -12,23 +12,37 @@ const Ico = () => {
   const leftComponent = (
     <Box
       sx={{
-        minHeight: "80vh",
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
       }}
     >
-      <form onSubmit={handleSubmit} style={{ maxWidth: "500px" }}>
+      <Box sx={{ textAlign: "center", mb: 2 }}>
+        <Typography variant="h2" sx={{ my: 0.5, color: "white" }}>
+          Welcome to Z<span style={{ color: "#FFFF00" }}>HH</span>U's
+        </Typography>
+        <Typography variant="h3" sx={{ color: "white" }}>
+          NFT REWARD
+        </Typography>
+        <Typography variant="h6" sx={{ color: "white", mt: "20px" }}>
+          Claim your NFT rewards
+        </Typography>
+      </Box>
+      <form
+        onSubmit={handleSubmit}
+        style={{ maxWidth: "500px", marginTop: "20px" }}
+      >
         <Input
           sx={{ color: "#FFFF00", textAlign: "center" }}
-          placeholder="Amount"
+          placeholder="AMOUNT"
           type="text"
           label="Input"
           variant="outlined"
           fullWidth
         />
         <Button
-          sx={{ mt: 5, fontWeight: "bold" }}
+          sx={{ mt: 2, fontWeight: "bold" }}
           type="submit"
           variant="contained"
           color="primary"
