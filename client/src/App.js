@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Invalid from "./pages/invalid";
 import Navbar from "./components/Navbar";
+import Ico from "./pages/ico/ico";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/ico" element={<Ico />} />
             <Route path="/*" element={<Invalid />} />
           </Routes>
         </Router>
