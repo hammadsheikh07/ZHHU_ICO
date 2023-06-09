@@ -11,10 +11,10 @@ const SideBySide = ({
   return (
     <Box>
       <Grid container sx={gridStyles}>
-        <Grid item xs={12} md={6} sx={leftStyles}>
+        <Grid item xs={12} md={7} sx={leftStyles}>
           {leftComponent}
         </Grid>
-        <Grid item xs={12} md={6} sx={rightStyles}>
+        <Grid item xs={12} md={5} sx={rightStyles}>
           {rightComponent}
         </Grid>
       </Grid>

@@ -21,7 +21,7 @@ const Home = () => {
       checkIfAddressInWhitelist();
       getNumberOfWhitelisted();
     }
-  },);
+  });
   /**
    * addAddressToWhitelist: Adds the current connected address to the whitelist
    */
@@ -114,21 +114,32 @@ const Home = () => {
   };
 
   const leftComponent = (
-    <>
+    <Box
+      sx={{
+        textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <Typography variant="h2" sx={{ my: 0.5, color: "white" }}>
-        Welcome to ZHHU!
+        Welcome to Z<span style={{ color: "#FFFF00" }}>HH</span>U!
       </Typography>
       <Typography
         variant="h5"
         sx={{ my: 0.5, color: "white", textAlign: "center" }}
       >
-        Whitelist your address to mint NFT so that you can participate in ICO
+        Whitelist your address to mint NFT(S) and participate in ICO
       </Typography>
-      <Typography sx={{ color: "white", mb: "10px" }}>
-        {numberOfWhitelisted} have already joined the Whitelist
+      <Typography variant="h6" sx={{ color: "white", mb: "10px" }}>
+        <span style={{ color: numberOfWhitelisted > 5 ? "green" : "red" }}>
+          {numberOfWhitelisted}
+        </span>{" "}
+        have already joined the Whitelist
       </Typography>
       {RenderButton()}
-    </>
+    </Box>
   );
 
   const rightComponent = (
@@ -139,7 +150,7 @@ const Home = () => {
   return (
     <Box
       sx={{
-        minHeight: "100vh",
+        minHeight: "91vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
