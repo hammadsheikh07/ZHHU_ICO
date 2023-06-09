@@ -13,9 +13,8 @@ const WalletContextProvider = ({ children }) => {
   useEffect(() => {
     if (!walletConnected) {
       getProviderAndSigner();
-      if(currentProvider==null)
-      {
-        setWalletConnected(true)
+      if (currentProvider == null) {
+        setWalletConnected(true);
       }
     }
   }, [walletConnected]);
