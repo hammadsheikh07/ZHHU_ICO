@@ -5,8 +5,14 @@ const theme = createTheme({
     primary: {
       main: "#ffff00",
     },
+    text: {
+      primary: "#FFF",
+    },
   },
   typography: {
+    allVariants: {
+      color: "white",
+    },
     fontFamily: "Nunito",
   },
 });
