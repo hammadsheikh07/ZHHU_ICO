@@ -9,18 +9,20 @@ import Navbar from "./components/Navbar";
 import Ico from "./pages/ico/ico";
 import { WalletContextProvider } from "./WalletContext";
 import PreNFTDrop from "./pages/prenftdrop/PreNftDrop";
+import RewardNft from "./pages/rewardNft/rewardNft";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <WalletContextProvider>
         <Container>
-          <Navbar />
           <Router>
+            <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/ico" element={<Ico />} />
-              <Route path="/prenftdrop" element={<PreNFTDrop />} />
+              <Route path="/pre-nft-drop" element={<PreNFTDrop />} />
+              <Route path="/reward-nft" element={<RewardNft />} />
               <Route path="/*" element={<Invalid />} />
             </Routes>
           </Router>

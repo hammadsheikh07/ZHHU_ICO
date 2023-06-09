@@ -6,7 +6,7 @@ import { WalletContext } from "../../WalletContext";
 import { prenftabi, PRE_NFTDROP_Address } from "../../constants/contants";
 import { Contract, utils } from "ethers";
 
-const PreNFTDrop = () => {
+const RewardNft = () => {
   const [totalMinted, setTotalMinted] = useState(19);
   const { walletConnected, currentSigner, connectWallet } =
     useContext(WalletContext);
@@ -219,11 +219,7 @@ const PreNFTDrop = () => {
     // If wallet is not connected, return a Button which allows them to connect their wllet
     if (!walletConnected) {
       return (
-        <Button
-          sx={{ fontWeight: "bold" }}
-          onClick={connectWallet}
-          variant="contained"
-        >
+        <Button onClick={connectWallet} variant="contained">
           Connect your wallet
         </Button>
       );
@@ -279,16 +275,14 @@ const PreNFTDrop = () => {
 
   const leftComponent = (
     <>
-      <Box sx={{ textAlign: "center", mb: 2 }}>
-        <Typography variant="h2" sx={{ my: 0.5, color: "white" }}>
-          Welcome to Z<span style={{ color: "#FFFF00" }}>HH</span>U's
-        </Typography>
-        <Typography variant="h3" sx={{ color: "white" }}>
-          PRE-NFT-DROP
-        </Typography>
-      </Box>
-      <Typography variant="h5" sx={{ my: 1, color: "white" }}>
-        Participate in our INITIAL COIN OFFERING.
+      <Typography
+        variant="h2"
+        sx={{ my: 0.5, color: "white", textAlign: "center" }}
+      >
+        Welcome to ZHHU Reward NFT!
+      </Typography>
+      <Typography variant="h5" sx={{ my: 0.5, color: "white" }}>
+        Its an Pre NFT drop to participate in ICO.
       </Typography>
       {renderButton()}
     </>
@@ -329,4 +323,4 @@ const PreNFTDrop = () => {
   );
 };
 
-export default PreNFTDrop;
+export default RewardNft;
