@@ -42,7 +42,7 @@ const RewardNft = () => {
       );
       let valuee = "";
       if (isReward) {
-        valuee = "0.0001";
+        valuee = "0.001";
       } else {
         valuee = "0.01";
       }
