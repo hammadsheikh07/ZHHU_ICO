@@ -20,12 +20,6 @@ const Home = () => {
         </Typography>{" "}
         have been minted
       </Typography>
-      <Button
-        variant="contained"
-        sx={{ my: 0.5, fontWeight: "bold" }}
-      >
-        Connect Wallet
-      </Button>
     </>
   );
 
